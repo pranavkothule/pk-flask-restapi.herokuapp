@@ -1,0 +1,20 @@
+from connections import execute_query
+
+
+def insert_data(data):
+    try:
+        query = '''insert into testData values(%s,%s)''', 
+        (data['name'], data['age'])
+        execute_query(query=query, query_details=data)
+        return 'successfully inserted'
+    except Exception as e:
+        return e
+
+def insert_data(data):
+    try:
+        query = '''insert into testData values(%s,%s)''', 
+        (data['name'], data['age'])
+        execute_query(query=query, query_details=data)
+        return 'successfully inserted'
+    except Exception as e:
+        return e
