@@ -1,5 +1,3 @@
-from unittest import result
-from fastapi import requests
 from flask import Flask
 from flask_restx import Api, Resource
 import requests
