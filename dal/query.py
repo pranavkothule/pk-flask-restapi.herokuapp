@@ -3,8 +3,7 @@ from connections.sqlite_connect import execute_query
 
 def insert_data(data):
     try:
-        query = '''insert into testData values(%s,%s)''', 
-        (data['name'], data['age'])
+        query = '''insert into testData(name, age) values(:name, :age)'''
         execute_query(query=query, query_details=data)
         return 'successfully inserted'
     except Exception as e:

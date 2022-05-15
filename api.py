@@ -33,8 +33,9 @@ class publicapis(Resource):
 @api.route("/insert_data_to_table")
 class insertTo(Resource):
     @api.expect(model_expect)
-    def get(self):
+    def post(self):
         data = api.payload
+        print(data)
         result = insert_data(data)
         return result
 
